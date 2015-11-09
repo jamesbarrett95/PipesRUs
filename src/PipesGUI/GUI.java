@@ -39,30 +39,30 @@ public class GUI extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
         jLabel8 = new javax.swing.JLabel();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jRadioButton7 = new javax.swing.JRadioButton();
+        oneColourButton = new javax.swing.JRadioButton();
+        twoColoursButton = new javax.swing.JRadioButton();
+        noColoursButton = new javax.swing.JRadioButton();
+        insulationYes = new javax.swing.JRadioButton();
+        insulationNo = new javax.swing.JRadioButton();
+        reinforcementYes = new javax.swing.JRadioButton();
+        reinforcementNo = new javax.swing.JRadioButton();
         jLabel9 = new javax.swing.JLabel();
-        jRadioButton8 = new javax.swing.JRadioButton();
-        jRadioButton9 = new javax.swing.JRadioButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        chemResistanceYes = new javax.swing.JRadioButton();
+        chemResistanceNo = new javax.swing.JRadioButton();
+        txtPipeSize = new javax.swing.JTextField();
+        txtPipeDiameter = new javax.swing.JTextField();
+        txtPipeGrade = new javax.swing.JTextField();
+        txtQuantity = new javax.swing.JTextField();
+        butCalculate = new javax.swing.JButton();
+        butExit = new javax.swing.JButton();
+        butAnotherPipe = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        txtBaseCost = new javax.swing.JTextField();
+        txtFinalCost = new javax.swing.JTextField();
+        txtPipeType = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Pipes R 'Us");
@@ -83,49 +83,66 @@ public class GUI extends javax.swing.JFrame {
 
         jLabel7.setText("Quantity of Pipes");
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("1 Colour");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(oneColourButton);
+        oneColourButton.setText("1 Colour");
+        oneColourButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                oneColourButtonActionPerformed(evt);
             }
         });
 
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("2 Colours");
+        buttonGroup1.add(twoColoursButton);
+        twoColoursButton.setText("2 Colours");
 
-        buttonGroup1.add(jRadioButton3);
-        jRadioButton3.setText("No Colours");
+        buttonGroup1.add(noColoursButton);
+        noColoursButton.setText("No Colours");
 
-        buttonGroup2.add(jRadioButton4);
-        jRadioButton4.setText("Yes");
+        buttonGroup2.add(insulationYes);
+        insulationYes.setText("Yes");
 
-        buttonGroup2.add(jRadioButton5);
-        jRadioButton5.setText("No");
+        buttonGroup2.add(insulationNo);
+        insulationNo.setText("No");
 
-        buttonGroup3.add(jRadioButton6);
-        jRadioButton6.setText("Yes");
-        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup3.add(reinforcementYes);
+        reinforcementYes.setText("Yes");
+        reinforcementYes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton6ActionPerformed(evt);
+                reinforcementYesActionPerformed(evt);
             }
         });
 
-        buttonGroup3.add(jRadioButton7);
-        jRadioButton7.setText("No");
+        buttonGroup3.add(reinforcementNo);
+        reinforcementNo.setText("No");
 
         jLabel9.setText("Pipe Chemical Resistance");
 
-        buttonGroup4.add(jRadioButton8);
-        jRadioButton8.setText("Yes");
-
-        buttonGroup4.add(jRadioButton9);
-        jRadioButton9.setText("No");
-
-        jButton3.setText("Calculate");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup4.add(chemResistanceYes);
+        chemResistanceYes.setText("Yes");
+        chemResistanceYes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                chemResistanceYesActionPerformed(evt);
+            }
+        });
+
+        buttonGroup4.add(chemResistanceNo);
+        chemResistanceNo.setText("No");
+
+        txtPipeSize.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPipeSizeActionPerformed(evt);
+            }
+        });
+
+        txtPipeDiameter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPipeDiameterActionPerformed(evt);
+            }
+        });
+
+        butCalculate.setText("Calculate");
+        butCalculate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butCalculateActionPerformed(evt);
             }
         });
 
@@ -145,23 +162,23 @@ public class GUI extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jRadioButton3)
+                                        .addComponent(noColoursButton)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton1)
+                                        .addComponent(oneColourButton)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton2))
+                                        .addComponent(twoColoursButton))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(31, 31, 31)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jRadioButton6)
-                                            .addComponent(jRadioButton4)
-                                            .addComponent(jRadioButton8)
-                                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(reinforcementYes)
+                                            .addComponent(insulationYes)
+                                            .addComponent(chemResistanceYes)
+                                            .addComponent(txtQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(84, 84, 84)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jRadioButton5)
-                                            .addComponent(jRadioButton7)
-                                            .addComponent(jRadioButton9))))
+                                            .addComponent(insulationNo)
+                                            .addComponent(reinforcementNo)
+                                            .addComponent(chemResistanceNo))))
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -175,14 +192,14 @@ public class GUI extends javax.swing.JFrame {
                                     .addComponent(jLabel1))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
-                                    .addComponent(jTextField2)
-                                    .addComponent(jTextField1)))
+                                    .addComponent(txtPipeGrade, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+                                    .addComponent(txtPipeDiameter)
+                                    .addComponent(txtPipeSize)))
                             .addComponent(jLabel6)
                             .addComponent(jLabel9))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton3)
+                        .addComponent(butCalculate)
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -191,58 +208,58 @@ public class GUI extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPipeSize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPipeDiameter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPipeGrade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
+                    .addComponent(noColoursButton)
+                    .addComponent(oneColourButton)
+                    .addComponent(twoColoursButton))
                 .addGap(22, 22, 22)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jRadioButton4)
-                    .addComponent(jRadioButton5))
+                    .addComponent(insulationYes)
+                    .addComponent(insulationNo))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jRadioButton6)
-                    .addComponent(jRadioButton7))
+                    .addComponent(reinforcementYes)
+                    .addComponent(reinforcementNo))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(jRadioButton8)
-                    .addComponent(jRadioButton9))
+                    .addComponent(chemResistanceYes)
+                    .addComponent(chemResistanceNo))
                 .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3)
+                .addComponent(butCalculate)
                 .addGap(37, 37, 37))
         );
 
-        jButton1.setText("Exit");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        butExit.setText("Exit");
+        butExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                butExitActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Add Another Pipe");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        butAnotherPipe.setText("Add Another Pipe");
+        butAnotherPipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                butAnotherPipeActionPerformed(evt);
             }
         });
 
@@ -252,16 +269,16 @@ public class GUI extends javax.swing.JFrame {
 
         jLabel12.setText("Base Cost: ");
 
-        jTextField5.setFocusable(false);
+        txtBaseCost.setFocusable(false);
 
-        jTextField6.setFocusable(false);
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        txtFinalCost.setFocusable(false);
+        txtFinalCost.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                txtFinalCostActionPerformed(evt);
             }
         });
 
-        jTextField7.setFocusable(false);
+        txtPipeType.setFocusable(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -282,16 +299,16 @@ public class GUI extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtPipeType, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton2)
+                                .addComponent(butAnotherPipe)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton1)
+                                .addComponent(butExit)
                                 .addGap(27, 27, 27))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtFinalCost, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtBaseCost, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(355, 355, 355))))))
         );
         layout.setVerticalGroup(
@@ -302,17 +319,17 @@ public class GUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtBaseCost, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtFinalCost, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
+                    .addComponent(txtPipeType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(butAnotherPipe)
+                    .addComponent(butExit))
                 .addContainerGap(72, Short.MAX_VALUE))
         );
 
@@ -320,29 +337,41 @@ public class GUI extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void butExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butExitActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_butExitActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void butAnotherPipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butAnotherPipeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_butAnotherPipeActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void oneColourButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneColourButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_oneColourButtonActionPerformed
 
-    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
+    private void reinforcementYesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reinforcementYesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton6ActionPerformed
+    }//GEN-LAST:event_reinforcementYesActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void butCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butCalculateActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_butCalculateActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void txtFinalCostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFinalCostActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_txtFinalCostActionPerformed
+
+    private void txtPipeSizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPipeSizeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPipeSizeActionPerformed
+
+    private void txtPipeDiameterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPipeDiameterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPipeDiameterActionPerformed
+
+    private void chemResistanceYesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chemResistanceYesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chemResistanceYesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -380,13 +409,17 @@ public class GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton butAnotherPipe;
+    private javax.swing.JButton butCalculate;
+    private javax.swing.JButton butExit;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.ButtonGroup buttonGroup4;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JRadioButton chemResistanceNo;
+    private javax.swing.JRadioButton chemResistanceYes;
+    private javax.swing.JRadioButton insulationNo;
+    private javax.swing.JRadioButton insulationYes;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -400,21 +433,17 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JRadioButton jRadioButton9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JRadioButton noColoursButton;
+    private javax.swing.JRadioButton oneColourButton;
+    private javax.swing.JRadioButton reinforcementNo;
+    private javax.swing.JRadioButton reinforcementYes;
+    private javax.swing.JRadioButton twoColoursButton;
+    private javax.swing.JTextField txtBaseCost;
+    private javax.swing.JTextField txtFinalCost;
+    private javax.swing.JTextField txtPipeDiameter;
+    private javax.swing.JTextField txtPipeGrade;
+    private javax.swing.JTextField txtPipeSize;
+    private javax.swing.JTextField txtPipeType;
+    private javax.swing.JTextField txtQuantity;
     // End of variables declaration//GEN-END:variables
 }
